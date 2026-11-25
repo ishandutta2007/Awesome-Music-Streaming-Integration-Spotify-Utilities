@@ -1,0 +1,173 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="360" style="background:#0b0f19;border-radius:16px;overflow:hidden;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0e17" />
+      <stop offset="50%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#05140d" />
+    </linearGradient>
+
+    <!-- Spotify Accent Gradient -->
+    <linearGradient id="spotifyGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1DB954" />
+      <stop offset="50%" stop-color="#1ed760" />
+      <stop offset="100%" stop-color="#38ef7d" />
+    </linearGradient>
+
+    <!-- Cyan Purple Gradient -->
+    <linearGradient id="techGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#818cf8" />
+    </linearGradient>
+
+    <!-- Card Glow / Glassmorphism -->
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.02" />
+    </linearGradient>
+
+    <!-- Glow Filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="10" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="pillShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#000000" flood-opacity="0.4" />
+    </filter>
+
+    <style>
+      /* Ambient Audio Waves Animation */
+      @keyframes eqBar {
+        0%, 100% { height: 18px; y: 46px; }
+        50% { height: 62px; y: 24px; }
+      }
+      .eq-bar-1 { animation: eqBar 1.2s ease-in-out infinite; }
+      .eq-bar-2 { animation: eqBar 0.9s ease-in-out infinite 0.2s; }
+      .eq-bar-3 { animation: eqBar 1.4s ease-in-out infinite 0.4s; }
+      .eq-bar-4 { animation: eqBar 1.1s ease-in-out infinite 0.1s; }
+      .eq-bar-5 { animation: eqBar 1.3s ease-in-out infinite 0.5s; }
+      .eq-bar-6 { animation: eqBar 0.8s ease-in-out infinite 0.3s; }
+      .eq-bar-7 { animation: eqBar 1.5s ease-in-out infinite 0.25s; }
+
+      /* Floating Ambient Spheres */
+      @keyframes floatSlow {
+        0%, 100% { transform: translateY(0px) scale(1); }
+        50% { transform: translateY(-16px) scale(1.05); }
+      }
+      @keyframes floatFast {
+        0%, 100% { transform: translateY(0px) translateX(0px); }
+        50% { transform: translateY(14px) translateX(12px); }
+      }
+      .floater-1 { animation: floatSlow 8s ease-in-out infinite; transform-origin: center; }
+      .floater-2 { animation: floatFast 6s ease-in-out infinite; transform-origin: center; }
+
+      /* Pulse Ring Animation */
+      @keyframes pulseRing {
+        0% { r: 50px; opacity: 0.6; }
+        50% { r: 90px; opacity: 0.15; }
+        100% { r: 50px; opacity: 0.6; }
+      }
+      .pulse-circle { animation: pulseRing 4s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+
+      /* Subtle Flow Dash Animation */
+      @keyframes flowDash {
+        to { stroke-dashoffset: -40; }
+      }
+      .signal-line { stroke-dasharray: 8 6; animation: flowDash 2.5s linear infinite; }
+    </style>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="1200" height="360" fill="url(#bgGrad)" />
+
+  <!-- Ambient Background Glows & Floating Elements -->
+  <g class="floater-1" opacity="0.45">
+    <circle cx="1060" cy="100" r="130" fill="#1DB954" filter="url(#glow)" opacity="0.3" />
+    <circle cx="160" cy="280" r="110" fill="#38bdf8" filter="url(#glow)" opacity="0.25" />
+    <circle cx="600" cy="30" r="100" fill="#818cf8" filter="url(#glow)" opacity="0.2" />
+  </g>
+
+  <g class="floater-2" opacity="0.4">
+    <circle cx="980" cy="270" r="90" fill="#10b981" filter="url(#glow)" opacity="0.25" />
+    <circle cx="280" cy="70" r="80" fill="#1DB954" filter="url(#glow)" opacity="0.2" />
+  </g>
+
+  <!-- Background Flow Lines (Dynamic Signal Bus) -->
+  <path d="M 60 300 Q 350 250 600 290 T 1140 250" fill="none" stroke="#1DB954" stroke-opacity="0.25" stroke-width="2" class="signal-line" />
+  <path d="M 100 70 Q 400 130 750 60 T 1120 110" fill="none" stroke="#38bdf8" stroke-opacity="0.2" stroke-width="1.5" class="signal-line" />
+
+  <!-- Dynamic Equalizer Visualizer (Bottom-Right Decorative Element) -->
+  <g transform="translate(1000, 245)" opacity="0.75">
+    <rect class="eq-bar-1" x="0" y="30" width="6" height="40" rx="3" fill="#1DB954" />
+    <rect class="eq-bar-2" x="12" y="24" width="6" height="46" rx="3" fill="#1ed760" />
+    <rect class="eq-bar-3" x="24" y="36" width="6" height="34" rx="3" fill="#38ef7d" />
+    <rect class="eq-bar-4" x="36" y="20" width="6" height="50" rx="3" fill="#1DB954" />
+    <rect class="eq-bar-5" x="48" y="28" width="6" height="42" rx="3" fill="#38bdf8" />
+    <rect class="eq-bar-6" x="60" y="34" width="6" height="36" rx="3" fill="#818cf8" />
+    <rect class="eq-bar-7" x="72" y="22" width="6" height="48" rx="3" fill="#1DB954" />
+  </g>
+
+  <!-- Left Dynamic Pulse Indicator (Spotify Connect / Radar) -->
+  <g transform="translate(100, 110)">
+    <circle class="pulse-circle" cx="0" cy="0" r="50" fill="none" stroke="#1DB954" stroke-width="2" />
+    <circle cx="0" cy="0" r="42" fill="#111c16" stroke="#1DB954" stroke-width="2" />
+    <!-- Spotify Acoustic Wave Icon -->
+    <path d="M -20 4 C -6 -3 10 -3 22 4 M -16 11 C -4 5 9 5 18 11 M -13 18 C -3 13 7 13 14 18" fill="none" stroke="#1DB954" stroke-width="3" stroke-linecap="round" />
+  </g>
+
+  <!-- FOREGROUND: Main Title and Badges (Always Clear & Centered) -->
+  <!-- Top Category Chip -->
+  <g transform="translate(600, 52)">
+    <rect x="-185" y="-16" width="370" height="32" rx="16" fill="url(#cardGrad)" stroke="#1DB954" stroke-opacity="0.4" stroke-width="1.2" />
+    <circle cx="-160" cy="0" r="5" fill="#1DB954" />
+    <text x="0" y="5" fill="#a7f3d0" font-size="12" font-weight="700" letter-spacing="1.5" text-anchor="middle">CURATED AWESOME ECOSYSTEM 🎧</text>
+  </g>
+
+  <!-- Main Repository Heading -->
+  <text x="600" y="118" fill="#ffffff" font-size="34" font-weight="900" letter-spacing="-0.5" text-anchor="middle">
+    Awesome Music Streaming Integration
+  </text>
+  <text x="600" y="162" fill="url(#spotifyGrad)" font-size="28" font-weight="800" letter-spacing="0.2" text-anchor="middle">
+    &amp; Spotify Utilities
+  </text>
+
+  <!-- Subtitle -->
+  <text x="600" y="202" fill="#94a3b8" font-size="15" font-weight="500" letter-spacing="0.3" text-anchor="middle">
+    Client Modding • Playlist Sync &amp; Migration • Scrobblers • APIs &amp; Self-Hosted Audio
+  </text>
+
+  <!-- Interactive Feature Pills in Foreground -->
+  <g transform="translate(600, 260)">
+    <!-- Pill 1: Spicetify Themes -->
+    <g transform="translate(-360, 0)" filter="url(#pillShadow)">
+      <rect x="0" y="0" width="168" height="40" rx="20" fill="#0f172a" stroke="#334155" stroke-width="1" />
+      <rect x="2" y="2" width="164" height="36" rx="18" fill="url(#cardGrad)" />
+      <text x="84" y="25" fill="#f8fafc" font-size="12.5" font-weight="600" text-anchor="middle">🎨 Spicetify Theming</text>
+    </g>
+
+    <!-- Pill 2: Playlist Sync -->
+    <g transform="translate(-175, 0)" filter="url(#pillShadow)">
+      <rect x="0" y="0" width="165" height="40" rx="20" fill="#0f172a" stroke="#334155" stroke-width="1" />
+      <rect x="2" y="2" width="161" height="36" rx="18" fill="url(#cardGrad)" />
+      <text x="82" y="25" fill="#f8fafc" font-size="12.5" font-weight="600" text-anchor="middle">🔄 Playlist Migration</text>
+    </g>
+
+    <!-- Pill 3: Self-Hosted Cloud -->
+    <g transform="translate(10, 0)" filter="url(#pillShadow)">
+      <rect x="0" y="0" width="165" height="40" rx="20" fill="#0f172a" stroke="#334155" stroke-width="1" />
+      <rect x="2" y="2" width="161" height="36" rx="18" fill="url(#cardGrad)" />
+      <text x="82" y="25" fill="#f8fafc" font-size="12.5" font-weight="600" text-anchor="middle">☁️ Subsonic &amp; Cloud</text>
+    </g>
+
+    <!-- Pill 4: Scrobblers & Stats -->
+    <g transform="translate(195, 0)" filter="url(#pillShadow)">
+      <rect x="0" y="0" width="165" height="40" rx="20" fill="#0f172a" stroke="#334155" stroke-width="1" />
+      <rect x="2" y="2" width="161" height="36" rx="18" fill="url(#cardGrad)" />
+      <text x="82" y="25" fill="#f8fafc" font-size="12.5" font-weight="600" text-anchor="middle">📊 Scrobble Analytics</text>
+    </g>
+  </g>
+
+  <!-- Bottom Accent Status Bar -->
+  <rect x="0" y="356" width="1200" height="4" fill="url(#spotifyGrad)" />
+</svg>
