@@ -71,7 +71,7 @@ Below is a curated comparison of leading SaaS platforms and hosted cloud service
 
 Explore the most popular open-source repositories, developer SDKs, terminal players, and self-hosted music servers in the Spotify and music streaming ecosystem. Repositories are ranked in descending order by GitHub stargazer count ⭐.
 
-| Project & Repository | Stars ⭐ | Description & Architecture Highlights 🛠️ |
+| Project & Repository | GitHub_Stars ⭐ | Description & Architecture Highlights 🛠️ |
 | :--- | :---: | :--- |
 | **[Spotube](https://github.com/KRTirtho/spotube)** | [![Stars](https://img.shields.io/github/stars/KRTirtho/spotube?style=social&color=white)](https://github.com/KRTirtho/spotube/stargazers) | Cross-platform, lightweight desktop & mobile client built with Flutter combining Spotify's metadata and playlist APIs with YouTube/Piped playback streams without Spotify Premium. |
 | **[spotDL (Spotify Downloader)](https://github.com/spotDL/spotify-downloader)** | [![Stars](https://img.shields.io/github/stars/spotDL/spotify-downloader?style=social&color=white)](https://github.com/spotDL/spotify-downloader/stargazers) | Fast Python CLI utility that finds songs from Spotify playlists, albums, and tracks on YouTube Music and embeds accurate metadata, synced lyrics, and high-res album art. |
@@ -153,7 +153,7 @@ Contributions are always welcome! 🚀 Please follow these guidelines:
 2. **Add or update an entry** in `README.md`:
    - For SaaS products: include Name, Link, Valuation/Revenue Scale, Starting Price, and Free Tier limits.
    - For Open-Source projects: include Name, Repository Link, the Stargazer Badge linked to stargazers (`https://img.shields.io/github/stars/owner/repo?style=social&color=white`), and a concise technical description.
-3. **Sort tables appropriately** (SaaS by valuation/revenue descending; Open Source by star count descending).
+3. **Sort tables appropriately** (SaaS by valuation/revenue descending; Open Source by Stars_Count descending).
 4. **Submit a pull request** describing your addition.
 
 ---
